@@ -10,5 +10,6 @@ import icon from 'astro-icon';
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), react(), icon()],
-  site: 'https://henriquesartori.github.io'
+  site: 'https://henriquesartori.github.io',
+  base: '/portfolio'
 });
