@@ -1,0 +1,36 @@
+---
+import { Icon } from "astro-icon/components";
+import Clock from "./react/Clock";
+---
+
+<header
+    class="px-5 py-5 flex justify-between fixed top-0 left-0 w-full z-50 bg-base-300 xl:bg-transparent"
+>
+    <div
+        class="badge badge-primary badge-outline h-7 w-7 grid place-items-center"
+    >
+        <label class="swap swap-rotate h-7 w-7 relative -translate-y-[1px]">
+            <!-- this hidden checkbox controls the state -->
+            <input type="checkbox" class="theme-controller" value="winter" />
+            <!-- moon icon -->
+            <Icon class="swap-on" name={"mdi:moon-and-stars"} />
+            <!-- sun icon -->
+            <Icon class={"swap-off"} name={"mdi:white-balance-sunny"} />
+        </label>
+    </div>
+
+    <div class="flex gap-2">
+        <div class="badge badge-base-100 flex gap-1 text-xs py-3">
+            <Icon
+                class={"opacity-70"}
+                size={14}
+                name="mdi:map-marker-outline"
+            />SÃO PAULO
+        </div>
+
+        <div class="badge badge-base-100 flex gap-1 text-xs py-3">
+            <Icon class={"opacity-70"} size={14} name="mdi:clock-outline" />
+            <Clock client:load />
+        </div>
+    </div>
+</header>

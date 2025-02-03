@@ -1,0 +1,42 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<section>
+    <div class="flex items-center justify-between">
+        <div>
+            <h1 class="text-2xl">Henrique Sartori</h1>
+            <h2 class="text-sm text-accent">Full Stack Developer</h2>
+        </div>
+        <div class="w-16 rounded-full overflow-hidden">
+            <img class="w-full" src="/henrique.jpeg" alt="" />
+        </div>
+    </div>
+
+    <p class="text-2xl mt-6">
+        As a full stack developer, I focus on building truly user-centric
+        solutions.
+        <span class="text-primary"
+            >I aim to understand the core needs of users and deliver efficient
+            applications that provide a meaningful experience.</span
+        >
+    </p>
+
+    <div class="flex justify-start gap-3 mt-6">
+        {
+            [
+                "language-typescript",
+                "language-javascript",
+                "react",
+                "nodejs",
+                "language-python",
+                "language-php",
+                "language-java",
+                "docker",
+                "aws"
+            ].map((l) => (
+                <Icon class={"text-accent"} size={32} name={`mdi:${l}`} />
+            ))
+        }
+    </div>
+</section>

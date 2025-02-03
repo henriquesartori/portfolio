@@ -1,0 +1,87 @@
+<div class="p-5 bg-base-100 rounded-xl relative">
+    <h3 class="text-xl">Full Stack Developer</h3>
+    <h4 class="text-primary text-xs">Allcom Telecom</h4>
+    <p class="opacity-70 mt-3 text-sm">
+        Development of CRMs and APIs using technologies and frameworks such as
+        React (Next), Node (Express, TypeORM), PHP (Laravel), MySQL, PostgreSQL,
+        and integrations like AWS S3, OneSignal.
+    </p>
+    <div class="badge badge-primary absolute top-5 right-5 text-xs">
+        CURRENT ROLE
+    </div>
+</div>
+
+<div class="p-5 bg-base-200 rounded-xl mt-3 relative">
+    <h3 class="text-xl">Freelancer</h3>
+    <p class="opacity-70 mt-3 text-sm">
+        Crafting everything from websites to full-scale systems for more than 5
+        years. My expertise spans various technologies, allowing me to deliver
+        customized solutions that meet client needs, whether it's a simple site
+        or a more complex application.
+    </p>
+    <div class="text-black badge bg-lime-500 absolute top-5 right-5 text-xs">
+        AVAILABLE
+    </div>
+</div>
+
+<div class="collapse mt-3">
+    <input id="toggle-checkbox" type="checkbox" />
+    <div class="collapse-title p-0 m-0">
+        <div class="divider">
+            <button
+                id="toggle-button"
+                class="btn btn-primary btn-xs font-normal"
+                >SHOW FORMER ROLES</button
+            >
+        </div>
+    </div>
+    <div class="collapse-content p-0">
+        <div class="p-5 bg-base-200 rounded-xl">
+            <div class="flex justify-between">
+                <div class="grow">
+                    <h3 class="text-xl">Lead Front-End Developer</h3>
+                    <h4 class="text-primary text-xs">Agência Alldigital</h4>
+                </div>
+                <div class="text-xs">2022 ——— 2024</div>
+            </div>
+            <p class="opacity-70 mt-3 text-sm">
+                Crafting everything from websites to full-scale systems. My
+                expertise spans various technologies, allowing me to deliver
+                customized solutions that meet client needs, whether it's a
+                simple site or a more complex application.
+            </p>
+        </div>
+        <div class="p-5 bg-base-200 rounded-xl mt-3">
+            <div class="flex justify-between">
+                <div class="grow">
+                    <h3 class="text-xl">Front-End Developer</h3>
+                    <h4 class="text-primary text-xs">Agência Alldigital</h4>
+                </div>
+                <div class="text-xs">2021 ——— 2022</div>
+            </div>
+            <p class="opacity-70 mt-3 text-sm">
+                Website development and maintenance with full front-end
+                development, API integration for lead generation; Usability and
+                responsiveness testing; Prototyping and image manipulation with
+                Figma.
+            </p>
+        </div>
+    </div>
+</div>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const checkbox = document.getElementById("toggle-checkbox") as HTMLInputElement;
+		const button = document.getElementById("toggle-button");
+	
+		if (!checkbox || !button) return;
+	
+		checkbox.addEventListener("change", () => {
+			if (checkbox.checked) {
+				button.textContent = "HIDE FORMER ROLES"; // Muda para 'HIDE'
+			} else {
+				button.textContent = "SHOW FORMER ROLES"; // Muda para 'SHOW'
+			}
+		});
+	})
+</script>

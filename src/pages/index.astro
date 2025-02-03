@@ -1,0 +1,115 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Banner from "../components/Banner.astro";
+import Expertises from "../components/Expertises.astro";
+import ProjectsCarousel from "../components/react/ProjectsCarousel";
+import Experience from "../components/Experience.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<Layout>
+	<Header />
+	<main class="max-w-3xl px-5 mx-auto">
+		<Banner />
+
+		<!-- Experience -->
+		<section class="mt-16">
+			<div class="badge badge-primary badge-outline text-xs">
+				EXPERIENCE
+			</div>
+			<div class="mt-6">
+				<Experience />
+			</div>
+		</section>
+
+		<!-- Projects -->
+		<section class="mt-16 relative">
+			<div class="badge badge-primary badge-outline text-xs">
+				FEATURED WORK
+			</div>
+
+			<div class="relative mt-6 lg:-mt-0 lg:static flex">
+				<button
+					class="swiper-button-prev text-primary text-5xl lg:absolute top-1/2 left-[-80px] z-10 lg:-translate-y-1/2"
+				>
+					<Icon name="mdi:arrow-left-bold-box" />
+				</button>
+				<button
+					class="swiper-button-next text-primary text-5xl lg:absolute top-1/2 right-[-80px] z-10lg:-translate-y-1/2"
+				>
+					<Icon name="mdi:arrow-right-bold-box" />
+				</button>
+			</div>
+
+			<div class="mt-6">
+				<ProjectsCarousel client:load />
+			</div>
+			<div class="text-center mt-3">
+				<p class="opacity-70 text-xs">
+					All the work listed above was <b>solely</b> developed and deployed
+					by me. Sensitive information has been blurred.
+					<br />
+					Feel free to contact me for more information on others projects
+					and softwares I have contributed to.
+				</p>
+			</div>
+		</section>
+
+		<!-- Expertises -->
+		<section class="mt-16">
+			<div class="badge badge-primary badge-outline text-xs">
+				EXPERTISES
+			</div>
+			<div class="mt-6">
+				<Expertises />
+			</div>
+		</section>
+
+		<div class="divider mt-16"></div>
+
+		<!-- About -->
+		<section class="mt-32">
+			<div
+				class="badge badge-primary badge-outline text-xs block w-fit mx-auto"
+			>
+				ABOUT ME & CONTACT INFO
+			</div>
+			<div class="mt-6 text-center">
+				<p class="opacity-70 text-sm">
+					I am a Full Stack Developer from Brazil, passionate about
+					coding since I was 8 years old. I began my journey with
+					ActionScript for Adobe Flash Player, following a variety of
+					video tutorials. Eventually I moved on to Java and started
+					my career as a freelancer selling "mods" (essentially
+					plugins) for popular games.
+				</p>
+			</div>
+			<div class="mt-6 grid grid-cols-2 xs:grid-cols-3 gap-6">
+				<a
+					href="https://github.com/henriquesartori"
+					target="_blank"
+					class="flex flex-col items-center gap-2"
+				>
+					<Icon class={"text-accent"} size={32} name="mdi:github" />
+					<span class="text-xs">/henriquesartori</span>
+				</a>
+				<a
+					href="mailto:henrique@sartori.dev.br"
+					class="flex flex-col items-center gap-2"
+				>
+					<Icon class={"text-accent"} size={32} name="mdi:envelope" />
+					<span class="text-xs">henrique@sartori.dev.br</span>
+				</a>
+				<a
+					href="https://linkedin.com/in/henriquevsartori"
+					target="_blank"
+					class="flex flex-col items-center gap-2"
+				>
+					<Icon class={"text-accent"} size={32} name="mdi:linkedin" />
+					<span class="text-xs">/henriquevsartori</span>
+				</a>
+			</div>
+		</section>
+	</main>
+</Layout>
