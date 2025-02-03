@@ -22,7 +22,7 @@ export default function ProjectsCarousel() {
             className="rounded-lg"
         >
             <SwiperSlide>
-                <img src='/projects/business.png' />
+                <img src='/portfolio/projects/business.png' />
                 <div className="text-center bg-base-100 p-5">
                     <h3 className="text-xl">Client Management System</h3>
                     <p className="opacity-70 mt-3 text-sm">
@@ -39,7 +39,7 @@ export default function ProjectsCarousel() {
             </SwiperSlide>
 
             <SwiperSlide>
-                <img src='/projects/website.png' />
+                <img src='/portfolio/projects/website.png' />
                 <div className="text-center bg-base-100 p-5">
                     <h3 className="text-xl">Website / Landing Page</h3>
                     <p className="opacity-70 mt-3 text-sm">
@@ -56,7 +56,7 @@ export default function ProjectsCarousel() {
             </SwiperSlide>
 
             <SwiperSlide>
-                <img src='/projects/immersive.png' />
+                <img src='/portfolio/projects/immersive.png' />
                 <div className="text-center bg-base-100 p-5">
                     <h3 className="text-xl">Immersive Fashion Brand Website</h3>
                     <p className="opacity-70 mt-3 text-sm">
